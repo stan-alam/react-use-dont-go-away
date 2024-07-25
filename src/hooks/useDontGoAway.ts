@@ -10,7 +10,8 @@ import {useEffect} from "react"
 export const useDontGoAway = (titles: string[]) => {
     const handleVisibilityChange = () => {
         // when the value of the document.visibility state is NOT visible - you should then iteterate through the titles
-        // passed to your hook, Mkay?
+        // passed to your hook, Mkay? if state is visible then STOP the iteration
+        // this can be accomplished using a react-state var
     }
     useEffect(() => {
         document.addEventListener("visibilitychange", handleVisibilityChange) 
