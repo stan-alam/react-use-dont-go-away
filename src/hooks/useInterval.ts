@@ -7,6 +7,6 @@ export const useInterval = (callback: () => void, interval: number) => {
     }, [callback])
 
     useEffect(() => {
-
+        const id = setInterval(() => callbackRef.current(), interval); //this will be used for "proper cleanup of the setInterval"
     }, [interval])
 }
