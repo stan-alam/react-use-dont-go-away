@@ -1,4 +1,8 @@
-import {useRef} from 'react';
+import {useRef,useEffect} from 'react';
 export const useInterval = (callback: () => void, interval: number) => {
-    const callbackRef = useRef(callback); //make sure everytime the callback is updated/changed, you willupdat the current value of the callbackRef
+    const callbackRef = useRef(callback); 
+
+    useEffect(() => { //here we implementing useEffect so when callback is updated/changed, useEffect will update the current value of the callbackRef
+        callbackRef.current = callback;
+    }, [callback])
 }
