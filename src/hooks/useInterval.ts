@@ -5,4 +5,8 @@ export const useInterval = (callback: () => void, interval: number) => {
     useEffect(() => { //here we implementing useEffect so when callback is updated/changed, useEffect will update the current value of the callbackRef
         callbackRef.current = callback;
     }, [callback])
+
+    useEffect(() => {
+
+    }, [interval])
 }
