@@ -28,3 +28,7 @@ node_modules
 npm-debug.log*
 mochawesome-reports/*
 /nodeDocker/node_modules/*
+
+**/node_modules
+
+/example-app/node_modules
