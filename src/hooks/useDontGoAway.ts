@@ -4,7 +4,7 @@
 // as soon as the hook mounts; you can begin to listen to events using react's use-event-hook, provide the empty dependency array
 //https://www.npmjs.com/package/react-use-event-hook
 // make sure that it fires on mount only -- i.e.
-// BEST PRACTICE TO REMOVE REACT HOOK WHEN IT UNMOUNTS
+// BEST PRACTICE TO REMOVE REACT HOOK WHEN IT UNMOUNTS -- do this return a function from the use-effect
 import {useEffect} from "react"
 export const useDontGoAway = (titles: string[]) => {
     useEffect(() => {
